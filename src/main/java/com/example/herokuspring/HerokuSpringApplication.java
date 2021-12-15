@@ -13,6 +13,14 @@ public class HerokuSpringApplication {
     int x = 2;
     int[] array = new int[4];
 
+    public HerokuSpringApplication() {
+
+        for(int i=0; i<array.length; i++){
+            array[i]=i+i;
+        }
+    }
+
+
     // @RequestMapping("/")
     @ResponseBody
     String home(){
