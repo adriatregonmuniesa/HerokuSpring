@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @SpringBootApplication
 public class HerokuSpringApplication {
 
-    @RequestMapping("/")
+    int x = 2;
+    int[] array = new int[4];
+
+    // @RequestMapping("/")
     @ResponseBody
     String home(){
         return "Hello World!!";
@@ -18,6 +21,16 @@ public class HerokuSpringApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(HerokuSpringApplication.class, args);
+
+    }
+
+    @RequestMapping("/")
+    void imprimirArray(){
+
+        for(int i=0; i<array.length; i++){
+            System.out.println("Valors: "+array[i]);
+        }
+
     }
 
 }
