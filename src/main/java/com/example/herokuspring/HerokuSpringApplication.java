@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @SpringBootApplication
 public class HerokuSpringApplication {
 
-    @RequestMapping("/")
+    @RequestMapping("/hola")
     @ResponseBody
     String home(){
         return "Hello World!";
