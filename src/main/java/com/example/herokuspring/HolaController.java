@@ -16,14 +16,7 @@ public class HolaController {
 
     }
 
-    @GetMapping("/formulario")
-    public String hola2() {
-
-        return "formulario";
-
-    }
-
-    @GetMapping("/formulario2")
+    @GetMapping("/formulari")
     public void forms() { }
 
     @PostMapping("/holapost")
