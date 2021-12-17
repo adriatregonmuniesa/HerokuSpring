@@ -21,7 +21,6 @@ public class HerokuSpringApplication {
         //}
     //}
 
-
     @RequestMapping("/")
     @ResponseBody
     String home(){

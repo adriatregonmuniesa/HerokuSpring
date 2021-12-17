@@ -23,6 +23,9 @@ public class HolaController {
 
     }
 
+    @GetMapping("/formulario2")
+    public void forms() { }
+
     @PostMapping("/holapost")
     @ResponseBody
     public String holaPost() {
