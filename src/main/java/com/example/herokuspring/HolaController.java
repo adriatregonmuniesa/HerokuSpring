@@ -23,7 +23,7 @@ public class HolaController {
     @ResponseBody
     public String holaPost() {
 
-        return "has fet una petició post";
+        return "has fet una petició post ";
 
     }
 }
