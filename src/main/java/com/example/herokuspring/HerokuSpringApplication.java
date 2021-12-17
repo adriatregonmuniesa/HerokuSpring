@@ -32,11 +32,6 @@ public class HerokuSpringApplication {
 
     }
 
-    @GetMapping("/Main")
-    public String sayHello() {
-        return "hello Main";
-    }
-
     //void imprimirArray(){
 
       //  for(int i=0; i<array.length; i++){
