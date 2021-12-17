@@ -22,7 +22,6 @@ public class HolaController {
     @PostMapping("/holapost")
     @ResponseBody
     public String holaPost() {
-
         return "has fet una petició post ";
 
     }
