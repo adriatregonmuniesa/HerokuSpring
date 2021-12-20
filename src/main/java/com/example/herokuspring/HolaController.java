@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HolaController {
 
-
     @GetMapping("/hola")
     @ResponseBody
     public String hola() {
@@ -24,4 +23,7 @@ public class HolaController {
         return "has fet una petició post ";
 
     }
+
+    @GetMapping("/index")
+    public void index() { }
 }

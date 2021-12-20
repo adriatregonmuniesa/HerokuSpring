@@ -1,0 +1,345 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font-weight: normal;
+}
+a {
+	transition: color 100ms linear;
+	-webkit-transition: color 100ms linear;
+	-moz-transition: color 100ms linear;
+	-o-transition: color 100ms linear;
+}
+body {
+	background: url("images/pattern.gif") repeat;
+	font-family: "Open Sans",arial;
+	font-size: 15px;
+}
+h1 {
+	font-size: 38px;
+	color: #555;
+}
+h2 {
+	font-size: 20px;
+	color: #737373;
+}
+#main {
+	margin: 20px auto;
+	width: 1200px;
+	padding: 10px;
+	background-color: #EFEFEF;
+	box-shadow: 10px 10px 5px #000;
+	border-radius: 5px;
+}
+.clear {
+	clear: both;
+}
+
+/* Animacion logo */
+@keyframes animacionLogo {
+	0%		{transform: scale(1);}
+	50%		{transform: scale(1.1);}
+	100%	{transform: scale(1);}
+}
+
+/* cabecera */
+header {
+	padding: 5px;
+	height: 50px;
+	position: relative;
+}
+header img {
+ 	height: 100%;
+}
+header a:hover img {
+	animation: animacionLogo 1s infinite;
+}
+header h1 {
+	margin-left: 5px;
+	vertical-align: top;
+	display: inline-block;
+	font-size: 30px;
+	letter-spacing:5px;
+	color: rgb(241,101,41);
+	font-weight: bold;
+}
+header h1 span {
+	font-size: 20px;
+	letter-spacing: -0.6px;
+	color: rgb(0,112,187);
+}
+
+/* Menu */
+nav {
+ 	text-align: center;
+}
+.menu li {
+ 	display: inline-block;
+ 	margin: 0 30px;
+}
+.menu li a {
+	font-size: 50px;
+	letter-spacing:5px;
+	color: rgba(119,119,119,0.5);
+	text-shadow: 0px 0px 0.4px #E8225D;
+}
+.menu li a:hover {
+	color: #FCA01C;
+}
+
+/* cuerpo */
+section {
+	float: left;
+	display: inline-block;
+ 	width: 80%;
+ 	padding: 10px;
+}
+.entrada h2 {
+	margin: 10px 0;
+	border-bottom: 1px solid lightgrey;
+}
+.entrada img {
+ 	border-radius: 5px;
+ 	width: 20%;
+ 	float: left;
+ 	margin: 0 10px 10px 0;
+ 	border: 1px solid lightgrey;
+}
+.entrada:after {
+ 	clear: both;
+ 	display: table;
+ 	content: "";
+}
+.entrada p {
+ 	width: 75%;
+ 	display: inline;
+}
+
+.definiciones {
+	border-collapse: collapse;
+	margin: 20px 0;
+	width: 100%;
+}
+.definiciones th {
+	letter-spacing: 5px;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 5px 0;
+}
+.definiciones tr {
+	border: 1px solid #ccc;
+}
+.definiciones tr:nth-child(even) {
+	background-color: lightgrey;
+}
+.definiciones tr td {
+	padding: 2px 5px;
+}
+.tEspecial:first-letter {
+	font-size: 200%;
+    color: #E8225D;
+}
+video, audio {
+	display: block;
+	width: 800px;
+	margin: 20px auto;
+	border-radius: 5px;
+}
+form#trabajar {
+	width: 100%;
+	padding: 20px;
+}
+form#trabajar label:not(.lselect), form#trabajar textarea, form#trabajar input:not(.enLinea), form#trabajar select {
+	display: block;
+	width: 500px;
+	margin: 10px 0;
+	border-radius: 5px;
+	padding: 5px 10px;
+}
+form#trabajar textarea, form#trabajar input:not(.enLinea), form#trabajar select {
+	background-color: lightgrey;
+	color: #E8225D;
+}
+form#trabajar select {
+	width: 520px;
+}
+form#trabajar label:not(.lselect) {
+	font-size: 22px;
+	letter-spacing: 2px;
+	margin-bottom: -8px;
+}
+.enLinea {
+	margin: 0 5px 0 10px;
+}
+span.req {
+	color: red;
+}
+form#trabajar .btn {
+	width: 240px;
+}
+.muestraAnimacion {
+	height: 100px;
+	margin: 10px 0;
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	position: relative;
+}
+/* Animacion CSS especial */
+@keyframes movimiento {
+	0%		{
+		transform: rotate(0deg);
+		left: 20px;
+		background-color: red;
+		box-shadow: 2px 2px 5px blue;
+	}
+	20%		{
+		background-color: green;
+	}
+	50%		{
+		transform: rotate(180deg);
+		left: 870px;
+		background-color: yellow
+	}
+	70%		{
+		background-color: blue;
+	}
+	100%	{
+		transform: rotate(360deg);
+		left: 20px;
+		background-color: red;
+		box-shadow: 2px 2px 5px red;
+	}
+}
+
+div.animacioncss {
+	padding: 20px 15px;
+	display: inline-block;
+	background-color: red;
+	border: 1px solid black;
+	border-radius: 6px;
+	font-weight: bold;
+	position: absolute;
+	top: 15px;
+
+	animation: movimiento 15s linear infinite;
+}
+
+@keyframes color {
+	0%		{background-color: lightgreen;}
+	50%		{background-color: lightblue;}
+	100%	{background-color: lightgreen;}
+}
+div.animacionColor {
+	margin-top: 15px;
+	width: 100%;
+	height: 600px;
+	text-align: center;
+	background-color: lightgreen;
+	animation: color 5s linear infinite;
+	position: relative;
+}
+div.animacionColor p {
+	margin-top: 250px;
+	display: inline-block;
+}
+
+/* Anuncio lateral */
+aside {
+	margin-top: 100px;
+	float: right;
+	display: inline-block;
+ 	width: 16%;
+ 	padding: 10px;
+ 	position: relative;
+ 	background-color: red;
+}
+aside a img {
+	width: 100%;
+}
+
+/* Pie */
+footer {
+	height: 150px;
+	bottom: 0px;
+ 	opacity: 0.8;
+ 	min-width: 1200px;
+ 	background-color: black;
+ 	color: white;
+ 	padding: 5px 20px;
+ 	text-align: center;
+}
+footer div {
+	text-align: left;
+	vertical-align: top;
+ 	width: 20%;
+ 	margin: 0 70px;
+ 	display: inline-block;
+}
+footer div h3 {
+	margin-bottom: 5px;
+}
+footer div ul {
+	text-align: left;
+}
+footer a {
+	color: white;
+}
+footer a:hover {
+	color: #E8225D;
+}
+footer div:first-child h3 {
+	color: #FCA01C;
+}
+footer div:nth-child(2) h3 {
+	color: #30B9B7;
+}
+footer div:last-child h3 {
+	color: #9AB430;
+}
+input[name="newsletter"] {
+	width: 200px;
+	display: block;
+	border-radius: 12px;
+	color: #E8225D;
+	padding: 2px 10px;
+}
+input[name="subscribirse"] {
+	margin-top: 10px;
+	border-radius: 5px;
+}
+
+/* Boton */
+.btn {
+  color: #FFF;
+  display: inline-block;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+  line-height: 2.5em;
+  padding: 0 3em;
+  text-decoration: none;
+}
+
+/* colores */
+.verde.btn {
+  background: linear-gradient(#6BDB55,#57B245);
+  text-shadow: 1px 1px 1px #57B245;
+}
+.rosa.btn {
+  background: linear-gradient(#E8225D,#B20808);
+  text-shadow: 1px 1px 1px #B20808;
+}
+.azul.btn {
+  background: linear-gradient(#11A1D6,#0E86B2);
+  text-shadow: 1px 1px 1px #0E86B2;
+}
+.btn:hover {
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.2),
+  inset 0 1.5em 1em rgba(255,255,255,0.3);
+  cursor: pointer;
+}
+.btn:active {
+  box-shadow: inset 0 1px 1px rgba(255,255,255,0.2),
+  inset 0 1.5em 1em rgba(0,0,0,0.3);
+}

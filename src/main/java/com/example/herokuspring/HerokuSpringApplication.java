@@ -42,8 +42,6 @@ public class HerokuSpringApplication {
 
         for(int i=0; i<array.length; i++){
             sw.write(array[i] +" ");
-            //return "Valors: "+array[i];
-            //System.out.println("Valors: "+array[i]);
         }
 
         return sw.toString();

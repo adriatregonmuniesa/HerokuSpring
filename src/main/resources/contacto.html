@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML5 y CSS3</title>
+		<meta charset="utf-8">
+		<link rel="icon" href="images/icon.png" type="image/gif" sizes="16x16">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta name="description" content="Todo lo que encesitas saber sobre HTML y CSS.">
+		<meta name="keywords" content="HTML,CSS,HTML5,CSS3,Animaciones,web">
+		<meta name="author" content="Jonathan Millan">
+	</head>
+	<body>
+		<div id="main">
+			<header>
+				<a href="index.html"><img src="images/logo.png" alt="HTML y CSS"><h1>HTML Flow<span>El poder del HTML y CSS</span></h1></a>
+			</header>
+			<nav>
+				<ul class="menu">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="html.html">HTML5</a></li>
+					<li><a href="css.html">CSS3</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+				</ul>
+			</nav>
+			<section>
+				<h1>Contacta con nosotros</h1>
+				<p>Envienos su información si esta interesado en trabajar con nosotros. (Los campos con <span class="req">*</span> son requeridos)</p>
+				<form id="trabajar" action="index.html" method="POST">
+					<input name="nombre" type="text" placeholder="Nombre *" required>
+					<input name="email" type="email" placeholder="Email *" required>
+					<input name="tel" type="tel" placeholder="Telefono">
+					<label>Nivel de estudios</label>
+					<select name="estudios">
+						<option value="primaria">Primaria</option>
+						<option value="eso">ESO</option>
+						<option value="bat">Batxillerato</option>
+						<option value="fp1">FP medio</option>
+						<option value="fp2">FP superior</option>
+						<option value="carrera">Carrera o superior</option>
+					</select>
+					<label>Sexo</label>
+					<label class="lselect"><input class="enLinea" name="sexo" type="radio" value="hombre">Hombre</label>
+					<label class="lselect"><input class="enLinea" name="sexo" type="radio" value="mujer">Mujer</label>
+					<label>Años de experiencia <span class="req">*</span></label>
+					<input name="exp" type="number" required>
+					<label>Fecha de nacimiento</label>
+					<input name="fechan" type="date">
+					<label>Currículum vítae <span class="req">*</span></label>
+					<input name="cv" type="file" required>
+					<label>Interesado trabajar en:</label>
+					<label class="lselect"><input class="enLinea" name="trabajo" type="checkbox" value="comercial">Comercial</label>
+					<label class="lselect"><input class="enLinea" name="trabajo" type="checkbox" value="progrmador">Programador</label>
+					<textarea name="menaje" placeholder="Breve descripción de por que deveriamos contratarlo?"></textarea>
+					<input class="enLinea btn rosa" type="submit" value="Enviar">
+					<input class="enLinea btn rosa" type="reset" value="Borrar">
+				</form>
+			</section>
+			<aside>
+				<a href="#"><img src="images/sidebanner.gif" alt="anuncio"></a>
+			</aside>
+			<div class="clear"></div>
+		</div>
+		<footer>
+			<div>
+				<h3>Recibe nuestras ofertas</h3>
+				<form action="index.html" method="post">
+					<input type="email" name="newsletter" placeholder="ejemplo@email.com">
+					<input class="btn verde" type="submit" name="subscribirse" value="Subscribirse">
+				</form>
+			</div>
+			<div>
+				<h3>Mapa web</h3>
+				<ul>
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="html.html">HTML5</a></li>
+					<li><a href="css.html">CSS3</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3>Enlaces de interes</h3>
+				<ul>
+					<li><a href="http://www.w3.org/">W3</a></li>
+					<li><a href="http://www.w3schools.com/">W3school</a></li>
+					<li><a href="http://www.css3.info/">CSS3 Info</a></li>
+					<li><a href="http://www.html5rocks.com/es/">HTML5 Rocks</a></li>
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>
