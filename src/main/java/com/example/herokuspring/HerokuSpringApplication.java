@@ -48,4 +48,20 @@ public class HerokuSpringApplication {
 
     }
 
+    @GetMapping("/formulari")
+    //@RequestMapping(value = "array", method = RequestMethod.GET)
+    public void forms() {
+
+        StringWriter sw = new StringWriter();
+
+        for(int i=0; i<array.length; i++){
+            sw.write(array[i] +" ");
+        }
+
+        ModelAndView model = new ModelAndView("formulari");
+        model.addAttribute("array", sw.toString());
+    }
+
+
+
 }

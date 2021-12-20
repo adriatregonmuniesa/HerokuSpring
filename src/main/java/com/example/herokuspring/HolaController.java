@@ -14,9 +14,6 @@ public class HolaController {
         return "has fet una petició get";
     }
 
-    @GetMapping("/formulari")
-    public void forms() { }
-
     @PostMapping("/holapost")
     @ResponseBody
     public String holaPost() {
