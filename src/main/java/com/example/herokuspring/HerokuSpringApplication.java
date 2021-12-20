@@ -7,19 +7,21 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.io.StringWriter;
+
 @Controller
 @SpringBootApplication
 public class HerokuSpringApplication {
 
-    //int x = 2;
-    //int[] array = new int[4];
+    int x = 2;
+    int[] array = new int[4];
 
-    //public HerokuSpringApplication() {
+    public HerokuSpringApplication() {
 
-      //  for(int i=0; i<array.length; i++){
-        //    array[i]=i+i;
-        //}
-    //}
+        for(int i=0; i<array.length; i++){
+            array[i]=i+i;
+        }
+    }
 
     @RequestMapping("/")
     @ResponseBody
@@ -32,12 +34,20 @@ public class HerokuSpringApplication {
 
     }
 
-    //void imprimirArray(){
+    @RequestMapping("/imprimirArray")
+    @ResponseBody
+    String imprimirArray(){
 
-      //  for(int i=0; i<array.length; i++){
-        //    System.out.println("Valors: "+array[i]);
-        //}
+        StringWriter sw = new StringWriter();
 
-    //}
+        for(int i=0; i<array.length; i++){
+            sw.write(array[i] +" ");
+            //return "Valors: "+array[i];
+            //System.out.println("Valors: "+array[i]);
+        }
+
+        return sw.toString();
+
+    }
 
 }
