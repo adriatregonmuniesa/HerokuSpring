@@ -13,7 +13,7 @@ a {
 	-o-transition: color 100ms linear;
 }
 body {
-	background: url("images/pattern.gif") repeat;
+	background: url("../images/pattern.gif") repeat;
 	font-family: "Open Sans",arial;
 	font-size: 15px;
 }
