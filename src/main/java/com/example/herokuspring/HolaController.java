@@ -25,9 +25,5 @@ public class HolaController {
     @GetMapping("/index")
     public void index() { }
 
-    @GetMapping("/hello")
-    public String hello(Model model) {
-        model.addAttribute("message", "Hello Thymeleaf!!");
-        return "hello";
-    }
+
 }
