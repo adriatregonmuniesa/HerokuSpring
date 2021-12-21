@@ -63,8 +63,6 @@ public class HerokuSpringApplication {
 
         model.addAttribute("continents", continents);
 
-        //model.addAttribute("serverTime", dateFormat.format(new Date()));
-
         return "formulari";
 
     }
@@ -73,6 +71,12 @@ public class HerokuSpringApplication {
     public String hello(Model model) {
         model.addAttribute("message", "Hello Thymeleaf!!");
         return "hello";
+    }
+
+    @GetMapping("/Observador")
+    public String observador(Model model) {
+        model.addAttribute("message", new ExerciciBiblioteca() );
+        return "Observador";
     }
 
 
