@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.io.StringWriter;
+import java.util.Date;
 
 @Controller
 @SpringBootApplication
@@ -18,10 +19,6 @@ public class HerokuSpringApplication {
     int x = 2;
     int[] array = new int[4];
 
-    String[] continents = {
-            "Africa", "Antarctica", "Asia", "Australia",
-            "Europe", "North America", "South America"
-    };
 
     public HerokuSpringApplication() {
 
@@ -59,6 +56,11 @@ public class HerokuSpringApplication {
     //@RequestMapping(value = "array", method = RequestMethod.GET)
     public String forms(Model model) {
 
+        String[] continents = {
+                "Africa", "Antarctica", "Asia", "Australia",
+                "Europe", "North America", "South America"
+        };
+
         StringWriter sw = new StringWriter();
 
         for(int i=0; i<array.length; i++){
@@ -69,6 +71,8 @@ public class HerokuSpringApplication {
         //Model model = new Model("formulari");
         //model.addObject("array", array);
         model.addAttribute("continents", continents);
+
+        //model.addAttribute("serverTime", dateFormat.format(new Date()));
 
         return "continents";
 
