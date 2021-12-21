@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulari</title>
+</head>
+<body>
+    <ul th:each="continet : ${continents}">
+        <li th:text="${continent}"></li>
+    </ul>
+
+    <ol>
+        <li th:text="${continents[2]}"></li>
+        <li th:text="${continents[0]}"></li>
+        <li th:text="${continents[4]}"></li>
+        <li th:text="${continents[5]}"></li>
+        <li th:text="${continents[6]}"></li>
+        <li th:text="${continents[3]}"></li>
+        <li th:text="${continents[1]}"></li>
+    </ol>
+
+    <h4 th:each="continent : ${continents}" th:text="${continent}"></h4>
+
+
+    <form action="holapost" method="post">
+        <input type="submit"/>
+    </form>
+</body>
+</html>

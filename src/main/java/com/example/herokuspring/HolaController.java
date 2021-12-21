@@ -1,6 +1,7 @@
 package com.example.herokuspring;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -23,4 +24,10 @@ public class HolaController {
 
     @GetMapping("/index")
     public void index() { }
+
+    @GetMapping("/hello")
+    public String hello(Model model) {
+        model.addAttribute("message", "Hello Thymeleaf!!");
+        return "hello";
+    }
 }
