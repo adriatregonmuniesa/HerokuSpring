@@ -3,9 +3,11 @@ package com.example.herokuspring;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.io.StringWriter;
 
@@ -15,6 +17,11 @@ public class HerokuSpringApplication {
 
     int x = 2;
     int[] array = new int[4];
+
+    String[] continents = {
+            "Africa", "Antarctica", "Asia", "Australia",
+            "Europe", "North America", "South America"
+    };
 
     public HerokuSpringApplication() {
 
@@ -50,7 +57,7 @@ public class HerokuSpringApplication {
 
     @GetMapping("/formulari")
     //@RequestMapping(value = "array", method = RequestMethod.GET)
-    public void forms() {
+    public String forms(Model model) {
 
         StringWriter sw = new StringWriter();
 
@@ -58,8 +65,13 @@ public class HerokuSpringApplication {
             sw.write(array[i] +" ");
         }
 
-        ModelAndView model = new ModelAndView("formulari");
-        model.addAttribute("array", sw.toString());
+        //ModelAndView model = new ModelAndView("formulari");
+        //Model model = new Model("formulari");
+        //model.addObject("array", array);
+        model.addAttribute("continents", continents);
+
+        return "continents";
+
     }
 
 
