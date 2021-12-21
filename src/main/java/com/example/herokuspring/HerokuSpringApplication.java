@@ -61,15 +61,6 @@ public class HerokuSpringApplication {
                 "Europe", "North America", "South America"
         };
 
-        //StringWriter sw = new StringWriter();
-
-        //for(int i=0; i<array.length; i++){
-          //  sw.write(array[i] +" ");
-        //}
-
-        //ModelAndView model = new ModelAndView("formulari");
-        //Model model = new Model("formulari");
-        //model.addObject("array", array);
         model.addAttribute("continents", continents);
 
         //model.addAttribute("serverTime", dateFormat.format(new Date()));
